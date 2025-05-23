@@ -1,0 +1,1 @@
+export default defineNuxtRouteMiddleware((to, from) => { /* حماية الصفحات */ })

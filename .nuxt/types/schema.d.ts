@@ -158,6 +158,10 @@ declare module 'nuxt/schema' {
    },
   }
   interface PublicRuntimeConfig {
+   supabaseUrl: string,
+
+   supabaseKey: string,
+
    supabase: {
       url: string,
 

@@ -3,38 +3,38 @@ import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, readBody, getQuery as getQuery$1, setCookie, getHeader, getResponseStatusText } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/h3/dist/index.mjs';
-import { createServerClient, parseCookieHeader } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/@supabase/ssr/dist/main/index.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import destr from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/destr/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/ufo/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/unhead/dist/server.mjs';
-import { isVNode, toValue, isRef } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/vue/index.mjs';
-import { walkResolver } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/unhead/dist/utils.mjs';
-import { renderToString } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/scule/dist/index.mjs';
-import { stringify, uneval } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/devalue/index.js';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, readBody, getQuery as getQuery$1, setCookie, getHeader, getResponseStatusText } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/h3@1.15.1/node_modules/h3/dist/index.mjs';
+import { createServerClient, parseCookieHeader } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/@supabase+ssr@0.5.2_@supabase+supabase-js@2.49.4/node_modules/@supabase/ssr/dist/main/index.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/vue-bundle-renderer@2.1.1/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import destr from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/ufo@1.5.4/node_modules/ufo/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/unhead@2.0.4/node_modules/unhead/dist/server.mjs';
+import { isVNode, toValue, isRef } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/vue@3.5.13/node_modules/vue/index.mjs';
+import { walkResolver } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/unhead@2.0.4/node_modules/unhead/dist/utils.mjs';
+import { renderToString } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/vue@3.5.13/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
+import { stringify, uneval } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/devalue@5.1.1/node_modules/devalue/index.js';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/unhead@2.0.4/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/ofetch@1.4.1/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/node-mock-http@1.0.0/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/unstorage@1.15.0_db0@0.3.1_ioredis@5.6.0/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/unstorage@1.15.0_db0@0.3.1_ioredis@5.6.0/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/youch-core@0.3.2/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/youch@4.1.0-beta.6/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/source-map@0.7.4/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/errx/dist/index.js';
+import { getContext } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/unctx@2.4.1/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
 import { fileURLToPath } from 'node:url';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/ipx/dist/index.mjs';
-import { isAbsolute } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/pathe/dist/index.mjs';
+import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/ipx@2.1.0_db0@0.3.1_ioredis@5.6.0/node_modules/ipx/dist/index.mjs';
+import { isAbsolute } from 'file://D:/programing/Web/hosam-ahmed-gad/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
 
 const serverAssets = [{"baseName":"server","dir":"D:/programing/Web/hosam-ahmed-gad/server/assets"}];
 
@@ -654,6 +654,8 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
+    "supabaseUrl": "https://ynnmdllydetdzujgwwgn.supabase.co",
+    "supabaseKey": "",
     "supabase": {
       "url": "https://ynnmdllydetdzujgwwgn.supabase.co",
       "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlubm1kbGx5ZGV0ZHp1amd3d2duIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4OTU0NzQsImV4cCI6MjA2MzQ3MTQ3NH0.8d5riadNXi0g2UrZ3TpxbsUkNjdFuPhUeTCOId3YK8A",
@@ -1064,7 +1066,7 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _dD2jWtUO7MLnpDfGKAnIxiMZb3M0ntvgyzMgqCmO3do = (function(nitro) {
+const _zLFJUbdcKc8jTUY8sT5w3opTKACw_07bguNdhtaaF1E = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script$1}<\/script>`);
   });
@@ -1089,7 +1091,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _Pl2yLVG19v7ChKvrfAlsOKJLoPkVfAN1S5bHNIoAs = (nitroApp) => {
+const _SnHgQA15oSMqAgk5EULXxEXwey36G0Z9ofzQ8Aq6cKk = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1160,16 +1162,16 @@ function onConsoleLog(callback) {
 
 const script = "\"use strict\";(()=>{const t=window,e=document.documentElement,c=[\"dark\",\"light\"],n=getStorageValue(\"localStorage\",\"nuxt-color-mode\")||\"system\";let i=n===\"system\"?u():n;const r=e.getAttribute(\"data-color-mode-forced\");r&&(i=r),l(i),t[\"__NUXT_COLOR_MODE__\"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=\"\"+o+\"\",a=\"\";e.classList?e.classList.add(s):e.className+=\" \"+s,a&&e.setAttribute(\"data-\"+a,o)}function d(o){const s=\"\"+o+\"\",a=\"\";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,\"g\"),\"\"),a&&e.removeAttribute(\"data-\"+a)}function f(o){return t.matchMedia(\"(prefers-color-scheme\"+o+\")\")}function u(){if(t.matchMedia&&f(\"\").media!==\"not all\"){for(const o of c)if(f(\":\"+o).matches)return o}return\"light\"}})();function getStorageValue(t,e){switch(t){case\"localStorage\":return window.localStorage.getItem(e);case\"sessionStorage\":return window.sessionStorage.getItem(e);case\"cookie\":return getCookie(e);default:return null}}function getCookie(t){const c=(\"; \"+window.document.cookie).split(\"; \"+t+\"=\");if(c.length===2)return c.pop()?.split(\";\").shift()}";
 
-const _ngVLsXOfG1lDWjirUE4j5tAbXDYr5NZ_IBlz55KrDLc = (function(nitro) {
+const _HbCK93pz1SsHyVK7Mt6En4Wc0RVEylED3GgVzca9IU = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
 const plugins = [
-  _dD2jWtUO7MLnpDfGKAnIxiMZb3M0ntvgyzMgqCmO3do,
-_Pl2yLVG19v7ChKvrfAlsOKJLoPkVfAN1S5bHNIoAs,
-_ngVLsXOfG1lDWjirUE4j5tAbXDYr5NZ_IBlz55KrDLc
+  _zLFJUbdcKc8jTUY8sT5w3opTKACw_07bguNdhtaaF1E,
+_SnHgQA15oSMqAgk5EULXxEXwey36G0Z9ofzQ8Aq6cKk,
+_HbCK93pz1SsHyVK7Mt6En4Wc0RVEylED3GgVzca9IU
 ];
 
 function defineRenderHandler(render) {
@@ -1260,7 +1262,7 @@ function publicAssetsURL(...path) {
   return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
 }
 
-const _SiuBUt = lazyEventHandler(() => {
+const _LenTot = lazyEventHandler(() => {
   const opts = useRuntimeConfig().ipx || {};
   const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
   const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
@@ -1281,15 +1283,15 @@ const _SiuBUt = lazyEventHandler(() => {
 const _lazy_iKsrmy = () => Promise.resolve().then(function () { return leaderboard_get$1; });
 const _lazy_SRNKqT = () => Promise.resolve().then(function () { return lessons_get$1; });
 const _lazy_KgJ6jw = () => Promise.resolve().then(function () { return myCourses_get$1; });
-const _lazy_FxAPCA = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_ECIw1Y = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '/api/leaderboard', handler: _lazy_iKsrmy, lazy: true, middleware: false, method: "get" },
   { route: '/api/lessons', handler: _lazy_SRNKqT, lazy: true, middleware: false, method: "get" },
   { route: '/api/my-courses', handler: _lazy_KgJ6jw, lazy: true, middleware: false, method: "get" },
-  { route: '/__nuxt_error', handler: _lazy_FxAPCA, lazy: true, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _SiuBUt, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_FxAPCA, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_ECIw1Y, lazy: true, middleware: false, method: undefined },
+  { route: '/_ipx/**', handler: _LenTot, lazy: false, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_ECIw1Y, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {

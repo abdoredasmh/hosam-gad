@@ -1,16 +1,16 @@
-// nuxt.config.ts
 export default defineNuxtConfig({
-
  
 
-  devtools: { enabled: true },
-
-  
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseKey: process.env.SUPABASE_ANON_KEY
+    }
+  },
 
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/supabase',
-    // '@nuxt/icon', // افترضنا إزالته
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/image'
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'system',
     fallback: 'light',
-    classSuffix: '', // مهم لـ Tailwind
+    classSuffix: '',
     storageKey: 'nuxt-color-mode'
   },
 
@@ -38,9 +38,8 @@ export default defineNuxtConfig({
     redirectOptions: {
       login: '/login',
       callback: '/confirm',
-      exclude: [ // الصفحات العامة فقط هنا
+      exclude: [
         '/',
-        // --- لا تضع /admin/** هنا ---
         '/lessons',
         '/lessons/*',
         '/books',
@@ -58,11 +57,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // --- هذا هو المكان الصحيح لتعطيل SSR ---
-  // --------------------------------------
-  // compatibilityDate: '2025-04-08' // يمكنك الاحتفاظ به أو إزالته
   routeRules: {
-    // تعطيل SSR لجميع المسارات التي تبدأ بـ /admin/
     '/admin/**': { ssr: false },
   },
 
